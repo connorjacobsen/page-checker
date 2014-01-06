@@ -48,6 +48,8 @@ while True:
 
 				# Let me know via stdout.
 				print 'Sent email to %s' % msg['To']
+		else:
+			print 'No changes found!'
 
 		# Only run once per every 12 hours.
 		time.sleep(43200)
