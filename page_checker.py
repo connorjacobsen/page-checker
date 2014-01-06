@@ -44,6 +44,9 @@ while True:
 				s.sendmail(msg['From'], msg['To'], msg.as_string())
 				s.quit()
 
+				# Let me know via stdout.
+				print 'Sent email to %s' % msg['To']
+
 		# Only run once per every 12 hours.
 		time.sleep(43200)
 	except KeyboardInterrupt:
