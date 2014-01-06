@@ -19,6 +19,7 @@ while True:
 		source = f.read()
 
 		# GET the current webpage.
+		print 'Checking source...'
 		r = requests.get('http://www.cise.ufl.edu/class/cda3101sp14/announcements.htm')
 		# Slicing out the first two characters because they showed up as '??', weird.
 		current_source = r.content[2:]
@@ -30,6 +31,7 @@ while True:
 			# The page has changed, most likely this means that there has been a new
 			# update posted. (It is also possible some style on the page has changed,
 			# this will be accounted for in future versions.)
+			print 'Changes detected!'
 
 			# Update the file that contains the source.
 			f.write(current_source)
