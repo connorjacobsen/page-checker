@@ -35,6 +35,7 @@ while True:
 
 			# Update the file that contains the source.
 			f.write(current_source)
+			f.close()
 
 			for email in emails:
 				msg['Subject'] = '[CDA3101] New Announcement!'
